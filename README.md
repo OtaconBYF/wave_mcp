@@ -39,11 +39,13 @@ WAVE_ACCESS_TOKEN=your_wave_oauth2_access_token_here
 ## Getting Your Wave Access Token
 
 1. Log in to your [Wave account](https://www.waveapps.com)
-2. Navigate to **Settings** → **API Access**
+2. Navigate to **Settings** → **API Access** (only available in Wave Business account)
 3. Create a new OAuth2 application
 4. Generate an OAuth2 Bearer access token with appropriate permissions
 
 > **Note**: Wave API access may require approval. Check Wave's current developer program status.
+
+> **Note2**: If you want to test without Wave Business account, login to waveapps.com and grab the Bearer token from the webpage's GraphQL requests. It works the same, for a limited time.
 
 ## Configuration
 
@@ -61,13 +63,13 @@ Add the server to your Claude Desktop configuration:
       "command": "python",
       "args": ["/absolute/path/to/wave_mcp/mcp_server.py"],
       "env": {
-        "WAVE_ACCESS_TOKEN": "your_wave_oauth2_access_token_here"
+        "WAVE_ACCESS_TOKEN": "your_wave_oauth2_access_token_here",
+        "WAVE_BUSINESS_ID": "Your Wave business ID (optional, Claude will ask for it if not configured)"
       }
     }
   }
 }
 ```
-
 Restart Claude Desktop after saving the configuration.
 
 ## Usage Examples
