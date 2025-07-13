@@ -74,6 +74,7 @@ Add the server to your Claude Desktop configuration:
 ```
 Restart Claude Desktop after saving the configuration.
 
+> **Note**: You can find business id (36-char UUID) in your waveapp webpage URL.
 
 ## Usage Examples
 
