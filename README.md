@@ -26,8 +26,10 @@ git clone https://github.com/yourusername/wave_mcp.git
 cd wave_mcp
 ```
 
-2. Install dependencies:
+2. Activate python venv, install dependencies:
 ```bash
+python -m venv venv
+source ./venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -60,7 +62,7 @@ Add the server to your Claude Desktop configuration:
 {
   "mcpServers": {
     "wave-accounting": {
-      "command": "python",
+      "command": "/absolute/path/to/wave_mcp/venv/bin/python",
       "args": ["/absolute/path/to/wave_mcp/mcp_server.py"],
       "env": {
         "WAVE_ACCESS_TOKEN": "your_wave_oauth2_access_token_here",
@@ -71,6 +73,7 @@ Add the server to your Claude Desktop configuration:
 }
 ```
 Restart Claude Desktop after saving the configuration.
+
 
 ## Usage Examples
 
